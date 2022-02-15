@@ -176,4 +176,6 @@ p#id-selector-2 {
     width: 20%;
     float: left;
 }
-
+.min-height-150 {
+    height: 150px;
+}

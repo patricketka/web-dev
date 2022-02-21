@@ -1,56 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="tuiter.css" rel="stylesheet">
+    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="explore.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
     <meta charset="UTF-8">
     <title>Explore</title>
 </head>
-<body class="wd-bg-black">
+<body>
     <a href="navigation.html">Back</a>
-    <br>
-    <div>
-        <div class="wd-padding-right">
-            <input class="wd-input-bar wd-rounder-corners" type="text" placeholder="&#x1F50E;Search Tuiter">
-            <a href="explore-settings.html" class="wd-setting-link"><img src="settings-icon-14976.png" height="25px" width="25px"></a>
-        </div>
-        <nav class="wd-padding-right wd-bg-black wd-border-gray wd-padding-right wd-border-bottom">
-            <ul>
-                <li class="wd-list-item wd-selected wd-border-bottom"><a href="for-you.html" class="wd-blue-font">For you</a></li>
-                <li class="wd-list-item"><a href="trending.html">Trending</a></li>
-                <li class="wd-list-item "><a href="covid-19.html">COVID-19</a></li>
-                <li class="wd-list-item"><a href="news.html">News</a></li>
-                <li class="wd-list-item"><a href="sports.html">Sports</a></li>
-                <li class="wd-list-item"><a href="entertainment.html">Entertainment</a></li>
-            </ul>
-        </nav>
-        <div class="wd-border-bottom wd-border-gray">
-            <p class="wd-sub-content">Trending in Science</p>
-            <p class="wd-main-content">Starship</p>
-            <p class="wd-sub-content">55.6k Tweets</p>
-        </div>
-        <div class="wd-border-bottom wd-border-gray">
-            <img src="nyt.jpg" height="100px" width="100px" class="wd-conent-img">
-            <p class="wd-author-content">The New York Times</p>
-            <p class="wd-main-content">Today's Top Headlines</p>
-            <p class="wd-sub-content">35.3k Tweets</p>
-        </div>
-        <div class="wd-border-bottom wd-border-gray">
-            <img src="zuckerberg.jpg" height="100px" width="100px" class="wd-conent-img">
-            <p class="wd-sub-content">Trending in Technology</p>
-            <p class="wd-main-content">Meta Stock Plunges</p>
-            <p class="wd-sub-content">355.6k Tweets</p>
-        </div>
-        <div class="wd-border-bottom wd-border-gray">
-            <img src="mac-jones.jpg" height="100px" width="100px" class="wd-conent-img">
-            <p class="wd-author-content">Bleacher Report</p>
-            <p class="wd-main-content">Mac Jones Selected to First Pro Bowl</p>
-            <p class="wd-sub-content">15.6k Tweets</p>
-        </div>
-        <div class="wd-border-bottom wd-border-gray">
-            <p class="wd-sub-content">Trending in Boston</p>
-            <p class="wd-main-content">Nor'easter</p>
-            <p class="wd-sub-content">140.2k Tweets</p>
+    <div class="container">
+        <div class="row">
+<!--            Left sidebar-->
+            <div class="col-2">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fa fa-house-user"></i> Home
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <i class="fa fa-hashtag"></i> Explore
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fa fa-bell"></i> Notifications
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fa fa-comment"></i> Messages
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fa fa-bookmark"></i> Bookmarks
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fa fa-list"></i> Lists
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fa fa-user"></i> Profile
+                    </a>
+                    <a href="#" class="p-16 pt-8 pb-8 list-group-item list-group-item-action">
+                            <span class="fa-stack fa-1x wd-align-left">
+                            <i class="fas fa-circle fa-stack-1x"></i>
+                            <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i>
+                            </span> More
+                    </a>
+                </div>
+                <button class="btn btn-primary col-12 mt-2">Tuit</button>
+            </div>
+<!--            Main Content-->
+            <div class="col-7">
+                <div class="row">
+                    <div class="input-group wd-rounded-borders col-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="searchTuiter">&#x1F50E;</span>
+                        </div>
+                        <input class="form-control" type="text" placeholder="Search Tuiter">
+                        <span class="align-middle m-1"><a href="#"><i class="fa fa-lemon"></i></a></span>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs mt-1">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">For you</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Entertainment</a>
+                    </li>
+                </ul>
+                <div class="card mt-2">
+                    <img src="mac_jones2.jpg" class="card-img">
+                    <div class="card-img-overlay d-flex align-items-end p-1">
+                        <h3 class="wd-white-font card-title mb-0">Mac Jones Selected to Pro Bowl</h3>
+                    </div>
+                </div>
+                <!--                Begin Main Content Items-->
+                <ul class="list-group ">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-10">
+                                <div class="row">
+                                    <span class="wd-light-gray-font">World News</span>
+                                </div>
+                                <div class="row">
+                                    <span class="fw-bold">ABC News<i class="fa fa-check-circle"></i></span>
+                                </div>
+                                <div class="row">
+                                    <span>Putin signs decree declaring independence of Ukrainian separatist regions.
+                                    World leaders discuss possible sanctions and next steps.</span>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <img class="img-fluid wd-rounded-borders" src="../images/abc_news.jpg">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        Item 2
+                    </li>
+                    <li class="list-group-item">
+                        Item 3
+                    </li>
+                    <li class="list-group-item">
+                        Item 4
+                    </li>
+                </ul>
+                <!--                End Main Content Items-->
+            </div>
+<!--            Right sidebar-->
+            <div class="col-3">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h6 class="fw-bold mb-0">
+                            Who to follow
+                        </h6>
+                    </li>
+                    <!--                    Begin Follow Component-->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-fluid" src="../images/java.png">
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="fw-bold">Java<i class="fa fa-check-circle"></i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>@Java</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-primary col-12">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!--                    End Follow Component-->
+                    <!--                    Begin Follow Component-->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-fluid" src="../images/java.png">
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="fw-bold">Java<i class="fa fa-check-circle"></i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>@Java</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-primary col-12">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!--                    End Follow Component-->
+                    <!--                    Begin Follow Component-->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-fluid" src="../images/java.png">
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="fw-bold">Java<i class="fa fa-check-circle"></i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>@Java</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-primary col-12">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!--                    End Follow Component-->
+                    <!--                    Begin Follow Component-->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-fluid" src="../images/java.png">
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="fw-bold">Java<i class="fa fa-check-circle"></i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>@Java</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-primary col-12">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!--                    End Follow Component-->
+                    <!--                    Begin Follow Component-->
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="img-fluid" src="../images/java.png">
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="fw-bold">Java<i class="fa fa-check-circle"></i></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span>@Java</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button class="btn btn-primary col-12">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <!--                    End Follow Component-->
+                </ul>
+            </div>
         </div>
     </div>
+
+<!--    <br>-->
+<!--    <div>-->
+<!--        <div class="wd-padding-right">-->
+<!--            <input class="wd-input-bar wd-rounder-corners" type="text" placeholder="&#x1F50E;Search Tuiter">-->
+<!--            <a href="explore-settings.html" class="wd-setting-link"><img src="settings-icon-14976.png" height="25px" width="25px"></a>-->
+<!--        </div>-->
+<!--        <nav class="wd-padding-right wd-bg-black wd-border-gray wd-padding-right wd-border-bottom">-->
+<!--            <ul>-->
+<!--                <li class="wd-list-item wd-selected wd-border-bottom"><a href="for-you.html" class="wd-blue-font">For you</a></li>-->
+<!--                <li class="wd-list-item"><a href="trending.html">Trending</a></li>-->
+<!--                <li class="wd-list-item "><a href="covid-19.html">COVID-19</a></li>-->
+<!--                <li class="wd-list-item"><a href="news.html">News</a></li>-->
+<!--                <li class="wd-list-item"><a href="sports.html">Sports</a></li>-->
+<!--                <li class="wd-list-item"><a href="entertainment.html">Entertainment</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--        <div class="wd-border-bottom wd-border-gray">-->
+<!--            <p class="wd-sub-content">Trending in Science</p>-->
+<!--            <p class="wd-main-content">Starship</p>-->
+<!--            <p class="wd-sub-content">55.6k Tweets</p>-->
+<!--        </div>-->
+<!--        <div class="wd-border-bottom wd-border-gray">-->
+<!--            <img src="nyt.jpg" height="100px" width="100px" class="wd-conent-img">-->
+<!--            <p class="wd-author-content">The New York Times</p>-->
+<!--            <p class="wd-main-content">Today's Top Headlines</p>-->
+<!--            <p class="wd-sub-content">35.3k Tweets</p>-->
+<!--        </div>-->
+<!--        <div class="wd-border-bottom wd-border-gray">-->
+<!--            <img src="zuckerberg.jpg" height="100px" width="100px" class="wd-conent-img">-->
+<!--            <p class="wd-sub-content">Trending in Technology</p>-->
+<!--            <p class="wd-main-content">Meta Stock Plunges</p>-->
+<!--            <p class="wd-sub-content">355.6k Tweets</p>-->
+<!--        </div>-->
+<!--        <div class="wd-border-bottom wd-border-gray">-->
+<!--            <img src="mac-jones.jpg" height="100px" width="100px" class="wd-conent-img">-->
+<!--            <p class="wd-author-content">Bleacher Report</p>-->
+<!--            <p class="wd-main-content">Mac Jones Selected to First Pro Bowl</p>-->
+<!--            <p class="wd-sub-content">15.6k Tweets</p>-->
+<!--        </div>-->
+<!--        <div class="wd-border-bottom wd-border-gray">-->
+<!--            <p class="wd-sub-content">Trending in Boston</p>-->
+<!--            <p class="wd-main-content">Nor'easter</p>-->
+<!--            <p class="wd-sub-content">140.2k Tweets</p>-->
+<!--        </div>-->
+<!--    </div>-->
 </body>
 </html>

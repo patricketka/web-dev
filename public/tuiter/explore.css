@@ -1,7 +1,9 @@
 .wd-rounded-borders {
     border-radius: 15px;
 }
-
+.wd-circle-avatar {
+    border-radius: 50%;
+}
 
 
 a {
@@ -26,6 +28,9 @@ a {
 }
 .wd-light-gray-font {
     color: lightgray;
+}
+.wd-dark-gray-font {
+    color: dimgray;
 }
 .wd-padding-left {
     padding-left: 16px;

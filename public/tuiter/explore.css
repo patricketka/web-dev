@@ -37,6 +37,7 @@
 .list-group-item .btn {
     background-color: white;
     color: black;
+    border-color: white;
 }
 
 .form-control {

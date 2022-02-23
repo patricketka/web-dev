@@ -42,7 +42,16 @@
 .form-control {
     background-color: darkgray;
 }
-/*End A3 classes*/
+.bg-secondary {
+    background-color: dimgray;
+}
+.right-side-bar .list-group .list-group-item {
+    background-color: dimgray;
+}
+.right-side-bar .list-group .row {
+    background-color: dimgray;
+}
+/*End Bootstrap overrides*/
 
 /*Begin A3 classes*/
 .wd-rounded-borders {

@@ -1,11 +1,51 @@
+/*Begin Bootstrap Overrides*/
+.row, ul, li, .list-group-item, .card, .card-img, body {
+    background-color: black;
+    border-color: darkgray;
+}
+
+.text-dark {
+    color: white !important;
+}
+
+.input-group-text {
+    background-color: darkgray;
+}
+
+.nav-link {
+    color: darkgray;
+}
+
+.active {
+    background-color: black !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.list-group, .list-group-item {
+    border: 0px !important;
+}
+
+.fa, .fab {
+    color: white !important;
+}
+.list-group-item .btn {
+    background-color: white;
+    color: black;
+}
+
+.form-control {
+    background-color: darkgray;
+}
+/*End A3 classes*/
+
+/*Begin A3 classes*/
 .wd-rounded-borders {
     border-radius: 15px;
 }
 .wd-circle-avatar {
     border-radius: 50%;
 }
-
-
 a {
     text-decoration: none;
     color: rgb(110, 118, 125);
@@ -196,3 +236,4 @@ div {
 .wd-align-left {
     float: left;
 }
+/*End A3 classes*/

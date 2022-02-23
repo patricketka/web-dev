@@ -26,9 +26,14 @@
     border: 0px !important;
 }
 
-.fa, .fab {
+.fa, .fab, .fas {
     color: white !important;
 }
+
+.fa-inverse {
+    color: black !important;
+}
+
 .list-group-item .btn {
     background-color: white;
     color: black;

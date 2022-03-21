@@ -235,6 +235,8 @@ const init = () => {
         .css('color', 'white');
 
     const parent = $("#parent");
+    const child1 = $("#child2");
+    child1.append("Hello")
     const child = parent.find("#child-2");
     child.css('background-color', 'blue')
 

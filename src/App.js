@@ -5,18 +5,33 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HelloWorld from "./components/hello-world";
 import Labs from "./components/labs";
 import HomeScreen from "./components/tuiter/HomeScreen";
-import ExploreScreen from "./components/tuiter/ExploreScreen";
+import ExploreScreen from "./components/tuiter/ExploreComponent";
+import Tuiter from "./components/tuiter"
+import ProfileScreen from "./components/tuiter/ProfileScreen";
+import ProfileEdit from "./components/tuiter/ProfileScreen/profile-edit";
 
 function App() {
   return (
       <BrowserRouter>
           <div className="container">
               <Routes>
-                  <Route path="/hello" element={<HelloWorld/>} exact={true}/>
-                  <Route path="/" element={<Labs/>}/>
-                  <Route path="/tuiter/explore" element={<ExploreScreen/>}/>
-                  <Route path="/tuiter/home" element={<HomeScreen/>}/>
-                  <Route path="/tuiter" element={<HomeScreen/>}/>
+                  <Route path='/'>
+                      <Route index
+                             element={<Labs/>}/>
+                      <Route path='hello'
+                             element={<HelloWorld/>}/>
+                      <Route path='tuiter'
+                            element={<Tuiter/>}>
+                          <Route index
+                                 element={<HomeScreen/>}/>
+                          <Route path='explore'
+                                 element={<ExploreScreen/>}/>
+                          <Route path='profile'
+                                 element={<ProfileScreen/>}/>
+                          <Route path='profile/edit'
+                                 element={<ProfileEdit/>}/>
+                      </Route>
+                  </Route>
               </Routes>
           </div>
       </BrowserRouter>

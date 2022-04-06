@@ -1,8 +1,12 @@
 import TodoList from "./todo-list.js";
 
-$('#wd-todo').append(`
-    <div class="container">
-        <h1>Todo example</h1>
-        ${TodoList()}
-    </div>
-`);
+const ToDos = () => {
+    return(
+        <>
+            <h1>ToDo example</h1>
+            <TodoList/>
+        </>
+    )
+};
+
+export default ToDos;

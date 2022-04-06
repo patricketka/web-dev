@@ -6,6 +6,9 @@ const TuitStats = ({tuit}) => {
     const likeTuit = () => {
         dispatch({type: 'like-tuit', tuit});
     };
+    const dislikeTuit = () => {
+        dispatch({type: 'dislike-tuit', tuit});
+    };
     return (
         <>
             <span className="col">
@@ -23,6 +26,17 @@ const TuitStats = ({tuit}) => {
                 {
                     !tuit.liked &&
                     <i className="far fa-heart me-1">{tuit.stats.likes}</i>
+                }
+            </span>
+            <span className="col" onClick={() => dislikeTuit()}>
+                {
+                    tuit.disliked &&
+                    <i className="fas fa-thumbs-down me-1"
+                       style={{color: 'red'}}>{tuit.stats.dislikes}</i>
+                }
+                {
+                    !tuit.disliked &&
+                    <i className="far fa-thumbs-down me-1">{tuit.stats.dislikes}</i>
                 }
             </span>
             <span className="col">

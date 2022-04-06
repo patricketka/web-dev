@@ -1,5 +1,6 @@
 import React from "react";
 import {useDispatch} from "react-redux";
+import {deleteTuit} from "../../../actions/tuits-actions";
 import TuitStats from "../tuit-stats";
 
 const TuitListItem = ({
@@ -15,18 +16,18 @@ const TuitListItem = ({
                         },
                         stats: {
                             retuits: '456',
-                            likes: '12k',
-                            replies: 10
+                            likes: 12,
+                            replies: 10,
+                            dislikes: 15
                         },
                         title: 'React.js is a component based front end library that makes it very easy to build Single Page ' +
                             'Applications or SPAs',
                         card_image: '/images/mac_jones2.jpg',
+                        liked: false,
+                        disliked: false
                     }
                   }) => {
     const dispatch = useDispatch();
-    const deleteTuit = (tuit) => {
-        dispatch({type: 'delete-tuit', tuit})
-    };
     return(
         <>
             <li className="list-group-item">
@@ -63,7 +64,7 @@ const TuitListItem = ({
                         </div>
                     </div>
                     <div className='col-1'>
-                        <i className='fas fa-minus-circle' onClick={() => deleteTuit(tuit)}/>
+                        <i className='fas fa-minus-circle' onClick={() => deleteTuit(dispatch, tuit)}/>
                     </div>
                 </div>
             </li>

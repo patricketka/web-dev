@@ -12,6 +12,7 @@ const PostItem = ({
                         card_image: '/images/mac_jones2.jpg',
                         handle: '@React',
                         likes: '12k',
+                        dislikes: '12k',
                         retweets: '456'
                     }
                   }) => {
@@ -46,7 +47,8 @@ const PostItem = ({
                             <span className="col"><i className="fa fa-comment">{post.comments ? `${post.comments}` : ''}</i></span>
                             <span className="col"><i className="fa fa-retweet">{post.retweets ? `${post.retweets}` : ''}</i></span>
                             <span className="col"><i className="fa fa-heart">{post.likes ? `${post.likes}` : ''}</i></span>
-                            <span className="col"><i className="fa fa-share"></i></span>
+                            <span className="col"><i className="fa fa-thumbs-down">{post.dislikes ? `${post.dislikes}` : ''}</i></span>
+                            <span className="col"><i className="fa fa-share"/></span>
                         </div>
                     </div>
                 </div>

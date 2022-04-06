@@ -1,17 +1,28 @@
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-
+import {createTuit} from "../../actions/tuits-actions.js"
 
 const WhatsHappening = () => {
-    const [whatsHappening, setWhatsHappening] = useState('');
     const dispatch = useDispatch();
     const profileData = useSelector(state => state.profileData)
-    const tuitClickHandler = () => {
-        dispatch({type: 'create-tuit',
-            tuit: whatsHappening,
-            profilePicture: profileData.profilePicture
+    const [newTuit, setNewTuit] = useState(
+        {
+            profile_picture: profileData.profilePicture,
+            postedBy: {
+                userName: "Patrick Etka",
+                handle: "@PatEtka"
+            },
+            tuit: "New Tuit",
+            time: "2h",
+            stats: {
+                retuits: 0,
+                likes: 0,
+                replies: 0,
+                dislikes: 0
+            },
+            liked: false,
+            disliked: false
         });
-    }
     return (
         <>
             <div className='row'>
@@ -19,10 +30,12 @@ const WhatsHappening = () => {
                     <img className="rounded-circle" width="100%" src={profileData.profilePicture} alt=''/>
                 </div>
                 <div className='col-10'>
-                    <textarea value={whatsHappening}
+                    <textarea
                               placeholder="What's Happening?"
-                              onChange={(event) => setWhatsHappening(event.target.value)}
-                              className='col-12 rounded'>
+                              className='col-12 rounded'
+                              onChange={(e) =>
+                                  setNewTuit({...newTuit,
+                                      tuit: e.target.value})}>
                     </textarea>
                     <span className="col-1 fa-stack fa-1x">
                                 <i className="fas fa-image fa-stack-1x"/>
@@ -36,7 +49,7 @@ const WhatsHappening = () => {
                     <span className="col-7 fa-stack fa-1x">
                                 <i className="fas fa-calendar fa-stack-1x"/>
                     </span>
-                    <button onClick={tuitClickHandler}
+                    <button onClick={() => createTuit(dispatch, newTuit)}
                             className='float-end col-2 btn-primary rounded-pill'>
                         Tuit
                     </button>

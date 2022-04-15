@@ -1,9 +1,8 @@
 import {DELETE_TUIT,
         FIND_ALL_TUITS,
         CREATE_TUIT} from "../../../actions/tuits-actions";
-import tuits from '../data/tuits.json'
 
-const tuitsReducer = (state = tuits, action) => {
+const tuitsReducer = (state = [], action) => {
     switch (action.type) {
         case CREATE_TUIT:
             return [
@@ -67,7 +66,7 @@ const tuitsReducer = (state = tuits, action) => {
                 ...state,
             ];
         default:
-            return tuits
+            return state
     }
 }
 
